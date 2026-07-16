@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Enzo Omani - Portfolio</title>
+    <style>
+        body { background: #08060f; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        p { font-family: monospace; color: #a855f7; font-size: 0.8rem; letter-spacing: 0.2em; }
+    </style>
+</head>
+<body>
+    <p>Redirecting…</p>
+    <script>
+        const lang = navigator.language || navigator.userLanguage || 'en';
+        if (lang.startsWith('fr')) {
+            window.location.replace('./fr/');
+        } else {
+            window.location.replace('./en/');
+        }
+    </script>
+</body>
+</html>

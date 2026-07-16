@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzo Omani - Game Developer & Game Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="hex-canvas"></canvas>
+
+    <nav class="nav">
+        <div class="nav-logo">E·O</div>
+        <div class="nav-right">Game Developer · Lyon</div>
+
+        <div class="lang-switcher">
+            <button class="lang-btn" id="lang-btn" aria-label="Switch language">
+                <span class="lang-current">EN</span>
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+            </button>
+            <div class="lang-dropdown" id="lang-dropdown">
+                <a href="../en/" class="lang-option lang-option--active">EN - English</a>
+                <a href="../fr/" class="lang-option">FR - Français</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-watermark">Omani</div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Game Developer &amp; Designer</p>
+            <h1>
+                I design<br>
+                <span class="highlight">experiences</span> that make<br>
+                you want to <span class="highlight-teal">explore</span>.
+            </h1>
+            <p class="hero-subtitle">
+                Gameplay &amp; Mechanics <span>·</span> Game Design <span>·</span> Unity / Unreal 5
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">View my projects <span class="btn-arrow">→</span></a>
+                <a href="CV_Enzo_Omani_EN.pdf" download class="btn-ghost">CV ↓</a>
+            </div>
+        </div>
+        <div class="scroll-hint"><div class="scroll-line"></div>Scroll</div>
+    </header>
+
+    <!-- À propos -->
+    <section id="about" class="section">
+        <p class="section-label">01 - About</p>
+        <h2>My <span class="accent">background</span></h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Currently in my 3rd year of a <span class="highlight">Bachelor in Computer Science, Game Development</span> at Gaming Campus (Lyon), specialising in gameplay mechanics and original system design.</p>
+                <p>I prefer games that teach you their rules without explaining them; that’s the philosophy that has guided the way I design my mechanics from the very beginning.</p>
+                <p>Having grown up with a <span class="highlight">Wii</span> in the living room, then discovered <span class="highlight">Warcraft III</span> and <span class="highlight">Minecraft</span> on my first PC, I quickly realized that what drew me in wasn’t just playing, but understanding why these experiences worked, and wanting to recreate them. A naturally logical mindset and a growing curiosity about programming languages and their internal mechanisms did the rest.</p>
+                <div class="formation-card">
+                    <div class="formation-icon">🎓</div>
+                    <div class="formation-content">
+                        <h3>Gaming Campus - Lyon</h3>
+                        <p class="formation-years">2023 - 2026</p>
+                        <p class="formation-degree">Bachelor in Computer Science, Game Development</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-highlights">
+                <div class="highlight-card">
+                    <span class="highlight-num">4</span>
+                    <div class="highlight-info">
+                        <span class="highlight-label">Completed projects</span>
+                        <span class="highlight-sub">+ 1 game concept</span>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-num">2</span>
+                    <div class="highlight-info">
+                        <span class="highlight-label">Engines</span>
+                        <span class="highlight-sub">Unity · Unreal Engine 5</span>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-num">5</span>
+                    <div class="highlight-info">
+                        <span class="highlight-label">Languages</span>
+                        <span class="highlight-sub">C# · C++ · C · Python · JS</span>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-num">3<span class="highlight-num-unit">ans</span></span>
+                    <div class="highlight-info">
+                        <span class="highlight-label">Education</span>
+                        <span class="highlight-sub">Gaming Campus, Lyon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="skills" class="section dark-section">
+        <p class="section-label">02 - Skills</p>
+        <h2>Technical <span class="accent">stack</span></h2>
+        <div class="skills-flat">
+            <div class="skills-flat-group">
+                <span class="skills-flat-label">Languages</span>
+                <div class="skills-flat-tags">
+                    <span class="skill-pill">C#</span>
+                    <span class="skill-pill">C / C++</span>
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">JavaScript</span>
+                </div>
+            </div>
+            <div class="skills-flat-group">
+                <span class="skills-flat-label">Engines</span>
+                <div class="skills-flat-tags">
+                    <span class="skill-pill accent">Unity</span>
+                    <span class="skill-pill accent">Unreal Engine 5</span>
+                </div>
+            </div>
+            <div class="skills-flat-group">
+                <span class="skills-flat-label">Tools</span>
+                <div class="skills-flat-tags">
+                    <span class="skill-pill">Git / GitHub</span>
+                    <span class="skill-pill">Miro</span>
+                    <span class="skill-pill">ClickUp</span>
+                </div>
+            </div>
+            <div class="skills-flat-group">
+                <span class="skills-flat-label">Domains</span>
+                <div class="skills-flat-tags">
+                    <span class="skill-pill highlight">Gameplay systems</span>
+                    <span class="skill-pill highlight">Game design</span>
+                    <span class="skill-pill highlight">Procedural generation</span>
+                    <span class="skill-pill highlight">Shaders &amp; VFX</span>
+                    <span class="skill-pill highlight">Level design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projects" class="section">
+        <p class="section-label">03 - Projects</p>
+        <h2>Developed <span class="accent">projects</span></h2>
+        <div class="projects-layout">
+
+            <!-- Liste gauche -->
+            <div class="projects-list-panel">
+
+                <div class="project-row" data-project="0">
+                    <span class="row-num">01</span>
+                    <div class="row-body">
+                        <h3 class="row-title">Procedural generation &amp; Portals</h3>
+                        <div class="row-meta">
+                            <span class="meta-badge">Team of 2</span>
+                            <span class="meta-badge">1 week</span>
+                            <span class="meta-badge">Unity</span>
+                        </div>
+                        <p class="row-desc">Exploration game with procedurally generated levels. Players collect paint pots to draw a portal on the ground and move to the next biome - plains, desert, snow.</p>
+                        <p class="row-role"><strong>My role:</strong> Terrain generation using Perlin noise & height mapping to create distinct biomes</p>
+                        <div class="row-tags"><span class="tag">Unity</span><span class="tag">Procedural</span><span class="tag">Perlin Noise</span><span class="tag">Biomes</span><span class="tag">C#</span></div>
+                        <a href="https://github.com/Nyevius/Portal-Procedural" target="_blank" rel="noopener" class="row-link">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                            GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-row" data-project="1">
+                    <span class="row-num">02</span>
+                    <div class="row-body">
+                        <h3 class="row-title">Shaders &amp; VFX - Crystal Quest</h3>
+                        <div class="row-meta">
+                            <span class="meta-badge">Team of 2</span>
+                            <span class="meta-badge">1 week</span>
+                            <span class="meta-badge">Unity</span>
+                        </div>
+                        <p class="row-desc">Unity shader showcase: a hero sets out to find a legendary crystal guarded by colourful goblins - absurd, immersive, visually polished.</p>
+                        <p class="row-role"><strong>My role:</strong> Custom shaders via ShaderGraph, post-processing integration (bloom, distortion), particle effects built with the VFX Graph</p>
+                        <div class="row-tags"><span class="tag">Unity</span><span class="tag">ShaderGraph</span><span class="tag">Post-Processing</span><span class="tag">VFX Graph</span><span class="tag">C#</span></div>
+                        <a href="https://github.com/Nyevius/Shaders-VFX" target="_blank" rel="noopener" class="row-link">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                            GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-row" data-project="2">
+                    <span class="row-num">03</span>
+                    <div class="row-body">
+                        <h3 class="row-title">Rooms - Escape Game</h3>
+                        <div class="row-meta">
+                            <span class="meta-badge">Team of 2</span>
+                            <span class="meta-badge">2 weeks</span>
+                            <span class="meta-badge">Unreal Engine 5</span>
+                        </div>
+                        <p class="row-desc">Trapped in a flat, every door leads to the same room - slightly different each time. Observe, memorise, progress. A minimalist puzzle about exploration and perception.</p>
+                        <p class="row-role"><strong>My role:</strong> Design of the cross-level progression logic, room status management, and exploration mechanics</p>
+                        <div class="row-tags"><span class="tag">Unreal 5</span><span class="tag">Blueprints</span><span class="tag">C++</span><span class="tag">Game Design</span></div>
+                        <a href="https://github.com/Nyevius/Rooms-Puzzle-Game-" target="_blank" rel="noopener" class="row-link">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                            GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-row" data-project="3">
+                    <span class="row-num">04</span>
+                    <div class="row-body">
+                        <h3 class="row-title">Spirit Dash - Game Concept</h3>
+                        <div class="row-meta">
+                            <span class="meta-badge">Solo concept</span>
+                            <span class="meta-badge">Platformer / Action</span>
+                        </div>
+                        <p class="row-desc">An amnesiac spirit traverses trap-filled ruins in search of lost memories. Full game system design: mechanics, narrative and progression.</p>
+                        <p class="row-role"><strong>Status:</strong> Documented concept, awaiting development</p>
+                        <div class="row-tags"><span class="tag">Game Design</span><span class="tag">Game Concept</span><span class="tag">Progression systems</span><span class="tag">Environmental storytelling</span></div>
+                        <a href="spirit-dash.html" class="row-concept-btn">
+                            View concept
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Preview panel droite -->
+            <div class="projects-preview-panel">
+                <div class="preview-frame" id="preview-frame">
+                    <!-- Placeholder -->
+                    <div class="preview-placeholder" id="preview-placeholder">
+                        <div class="placeholder-diamond"></div>
+                        <span class="placeholder-text">Hover a project</span>
+                    </div>
+
+                    <!-- Slides projet 0 -->
+                    <div class="preview-slide" data-project="0" data-img="0"><img src="../images/GenProcStart.png" alt="Plaines"></div>
+                    <div class="preview-slide" data-project="0" data-img="1"><img src="../images/GenProcDesert.png" alt="Désert"></div>
+                    <div class="preview-slide" data-project="0" data-img="2"><img src="../images/GenProcPortal.png" alt="Portail"></div>
+
+                    <!-- Slides projet 1 -->
+                    <div class="preview-slide" data-project="1" data-img="0"><img src="../images/ShaderVFX (1).png" alt="Crystal Quest"></div>
+                    <div class="preview-slide" data-project="1" data-img="1"><img src="../images/ShaderVFX (2).png" alt="VFX"></div>
+
+                    <!-- Slides projet 2 -->
+                    <div class="preview-slide" data-project="2" data-img="0"><img src="../images/RoomScreen (1).png" alt="Rooms 1"></div>
+                    <div class="preview-slide" data-project="2" data-img="1"><img src="../images/RoomScreen (2).png" alt="Rooms 2"></div>
+                    <div class="preview-slide" data-project="2" data-img="2"><img src="../images/RoomScreen (3).png" alt="Rooms 3"></div>
+
+                    <!-- Concept Spirit Dash -->
+                    <div class="preview-slide" data-project="3" data-img="0">
+                        <img src="../images/SpiritDash.png" alt="Spirit Dash">
+                    </div>
+                </div>
+
+                <!-- Nav barre sous la preview -->
+                <div class="preview-nav">
+                    <span class="preview-nav-title" id="preview-nav-title">-</span>
+                    <div class="preview-dots" id="preview-dots"></div>
+                    <div class="preview-arrows">
+                        <button class="preview-btn" id="preview-prev">‹</button>
+                        <button class="preview-btn" id="preview-next">›</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <p class="section-label">04 - Contact</p>
+        <h2>Let's stay in <span class="accent">touch</span></h2>
+        <div class="contact-layout">
+            <div>
+                <p class="contact-intro">Open to opportunities in <span class="highlight">game development</span> - internships, work-study programmes, collaborative projects.</p>
+                <p class="contact-location">📍 Lyon, France</p>
+                <div class="contact-links">
+                    <a href="mailto:en.crivello@gmail.com" class="contact-link">
+                        <span class="contact-icon">📧</span>
+                        <div class="contact-info-block"><span class="contact-label">Email</span><span class="contact-value">en.crivello@gmail.com</span></div>
+                    </a>
+                    <a href="https://github.com/Nyevius" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <span class="contact-icon">💻</span>
+                        <div class="contact-info-block"><span class="contact-label">GitHub</span><span class="contact-value">github.com/Nyevius</span></div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/enzo-omani/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <span class="contact-icon">💼</span>
+                        <div class="contact-info-block"><span class="contact-label">LinkedIn</span><span class="contact-value">Enzo Omani</span></div>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-actions">
+                <p class="contact-actions-title">Let's work together</p>
+                <p class="contact-actions-sub">Available to discuss your projects</p>
+                <a href="mailto:en.crivello@gmail.com" class="btn-primary btn-large">Get in touch <span class="btn-arrow">→</span></a>
+                <a href="CV_Enzo_Omani_EN.pdf" download class="btn-secondary">Download my CV ↓</a>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>© 2026 - Enzo Omani · Game Developer &amp; Game Designer · Lyon</p></footer>
+
+    <script src="script.js"></script>
+    <script>
+    /* ── Preview panel interactif ───────────────────────── */
+    const projectData = [
+        { title: 'Procedural Generation', imgCount: 3 },
+        { title: 'Shaders & VFX', imgCount: 2 },
+        { title: 'Rooms - Escape Game', imgCount: 3 },
+        { title: 'Spirit Dash - Concept', imgCount: 1 }
+    ];
+
+    let activeProject = -1;
+    let activeImg = 0;
+
+    const frame       = document.getElementById('preview-frame');
+    const placeholder = document.getElementById('preview-placeholder');
+    const navTitle    = document.getElementById('preview-nav-title');
+    const dotsWrap    = document.getElementById('preview-dots');
+    const btnPrev     = document.getElementById('preview-prev');
+    const btnNext     = document.getElementById('preview-next');
+
+    function showProject(idx) {
+        if (idx === activeProject) return;
+        activeProject = idx;
+        activeImg = 0;
+
+        // masque placeholder
+        placeholder.classList.add('hidden');
+        frame.classList.add('lit');
+
+        // masque tous les slides et concepts
+        document.querySelectorAll('.preview-slide, .preview-concept').forEach(el => el.classList.remove('active'));
+
+        const data = projectData[idx];
+
+        if (data.imgCount === 0) {
+            // concept
+            document.querySelector(`.preview-concept[data-project="${idx}"]`).classList.add('active');
+            navTitle.textContent = data.title;
+            dotsWrap.innerHTML = '';
+            btnPrev.style.opacity = '0.2';
+            btnNext.style.opacity = '0.2';
+        } else {
+            showImg(idx, 0);
+            navTitle.textContent = data.title;
+            buildDots(idx, data.imgCount);
+            btnPrev.style.opacity = '1';
+            btnNext.style.opacity = '1';
+        }
+
+        document.querySelectorAll('.project-row').forEach((r, i) => r.classList.toggle('active', i === idx));
+    }
+
+    function showImg(proj, imgIdx) {
+        document.querySelectorAll(`.preview-slide[data-project="${proj}"]`).forEach(el => el.classList.remove('active'));
+        const target = document.querySelector(`.preview-slide[data-project="${proj}"][data-img="${imgIdx}"]`);
+        if (target) target.classList.add('active');
+        activeImg = imgIdx;
+        document.querySelectorAll('.preview-dot').forEach((d, i) => d.classList.toggle('active', i === imgIdx));
+    }
+
+    function buildDots(proj, count) {
+        dotsWrap.innerHTML = '';
+        for (let i = 0; i < count; i++) {
+            const d = document.createElement('span');
+            d.className = 'preview-dot' + (i === 0 ? ' active' : '');
+            d.addEventListener('click', () => showImg(proj, i));
+            dotsWrap.appendChild(d);
+        }
+    }
+
+    btnPrev.addEventListener('click', () => {
+        if (activeProject < 0 || projectData[activeProject].imgCount === 0) return;
+        const c = projectData[activeProject].imgCount;
+        showImg(activeProject, (activeImg - 1 + c) % c);
+    });
+
+    btnNext.addEventListener('click', () => {
+        if (activeProject < 0 || projectData[activeProject].imgCount === 0) return;
+        const c = projectData[activeProject].imgCount;
+        showImg(activeProject, (activeImg + 1) % c);
+    });
+
+    document.querySelectorAll('.project-row').forEach((row, i) => {
+        row.addEventListener('mouseenter', () => showProject(i));
+    });
+    </script>
+</body>
+</html>
