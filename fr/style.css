@@ -71,7 +71,7 @@ body {
     position: fixed;
     pointer-events: none;
     z-index: 9998;
-    font-size: 26px;
+    font-size: 52px;
     line-height: 1;
     color: rgba(255,133,119,0.35);
     transform: translate(-50%, -50%) rotate(0deg);
