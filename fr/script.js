@@ -26,13 +26,14 @@ if (!isTouch) {
     })();
 }
 
-/* ── Grille hexagonale canvas ───────────────────────────── */
+/* ── Grille d'étoiles canvas ─────────────────────────────── */
 const canvas = document.getElementById('hex-canvas');
 const ctx = canvas.getContext('2d');
 
-let W, H, hexes = [];
-const HEX_SIZE = 38;
-const HEX_GAP = 4;
+let W, H, stars = [];
+const STAR_SIZE = 20;
+const STAR_INNER = 6;
+const STAR_GAP = 46;
 
 let mouseX = -9999, mouseY = -9999;
 document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
@@ -40,72 +41,71 @@ document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.cli
 function resize() {
     W = canvas.width = window.innerWidth;
     H = canvas.height = window.innerHeight;
-    buildHexes();
+    buildStars();
 }
 
-function hexPoly(cx, cy, r) {
+function starPoly(cx, cy, outerR, innerR) {
     ctx.beginPath();
-    for (let i = 0; i < 6; i++) {
-        const a = Math.PI / 180 * (60 * i - 30);
-        i === 0 ? ctx.moveTo(cx + r * Math.cos(a), cy + r * Math.sin(a))
-            : ctx.lineTo(cx + r * Math.cos(a), cy + r * Math.sin(a));
+    for (let i = 0; i < 8; i++) {
+        const r = i % 2 === 0 ? outerR : innerR;
+        const a = Math.PI / 180 * (45 * i - 90);
+        const x = cx + r * Math.cos(a);
+        const y = cy + r * Math.sin(a);
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     }
     ctx.closePath();
 }
 
-function buildHexes() {
-    hexes = [];
-    const r = HEX_SIZE;
-    const w = r * 2;
-    const h = Math.sqrt(3) * r;
-    const cols = Math.ceil(W / (w * 0.75)) + 2;
-    const rows = Math.ceil(H / h) + 2;
+function buildStars() {
+    stars = [];
+    const cols = Math.ceil(W / STAR_GAP) + 2;
+    const rows = Math.ceil(H / STAR_GAP) + 2;
 
     for (let row = -1; row < rows; row++) {
         for (let col = -1; col < cols; col++) {
-            const offset = (col % 2) * (h / 2);
-            hexes.push({
-                x: col * w * 0.75,
-                y: row * h + offset,
+            const jitterX = (row % 2) * (STAR_GAP / 2);
+            stars.push({
+                x: col * STAR_GAP + jitterX,
+                y: row * STAR_GAP,
                 phase: Math.random() * Math.PI * 2,
-                speed: 0.003 + Math.random() * 0.004,
-                pulse: 0
+                speed: 0.003 + Math.random() * 0.004
             });
         }
     }
 }
 
-function animHex() {
+function animStars() {
     ctx.clearRect(0, 0, W, H);
     const now = Date.now();
 
-    hexes.forEach(h => {
-        const dx = h.x - mouseX;
-        const dy = h.y - mouseY;
+    stars.forEach(s => {
+        const dx = s.x - mouseX;
+        const dy = s.y - mouseY;
         const dist = Math.sqrt(dx * dx + dy * dy);
         const maxDist = 180;
         const proximity = dist < maxDist ? 1 - dist / maxDist : 0;
 
-        const breathe = (Math.sin(now * h.speed + h.phase) + 1) / 2;
-        const alpha = 0.025 + breathe * 0.018 + proximity * 0.14;
+        const breathe = (Math.sin(now * s.speed + s.phase) + 1) / 2;
+        const alpha = 0.025 + breathe * 0.02 + proximity * 0.16;
+        const scale = 1 + proximity * 0.6;
 
-        ctx.strokeStyle = `rgba(168, 85, 247, ${alpha})`;
+        ctx.strokeStyle = `rgba(255, 133, 119, ${alpha})`;
         ctx.lineWidth = proximity > 0.3 ? 0.8 : 0.4;
-        hexPoly(h.x, h.y, HEX_SIZE - HEX_GAP);
+        starPoly(s.x, s.y, (STAR_SIZE / 2) * scale, (STAR_INNER / 2) * scale);
         ctx.stroke();
 
         if (proximity > 0.5) {
-            ctx.fillStyle = `rgba(168, 85, 247, ${proximity * 0.04})`;
+            ctx.fillStyle = `rgba(255, 133, 119, ${proximity * 0.06})`;
             ctx.fill();
         }
     });
 
-    requestAnimationFrame(animHex);
+    requestAnimationFrame(animStars);
 }
 
 window.addEventListener('resize', resize);
 resize();
-animHex();
+animStars();
 
 /* ── Nav scrolled ───────────────────────────────────────── */
 const nav = document.querySelector('.nav');

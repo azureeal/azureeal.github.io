@@ -64,7 +64,7 @@ body {
 }
 
     .cursor-diamond::before {
-        content: '♥';
+        content: '✦';
     }
 
 .cursor-outer {
@@ -926,7 +926,13 @@ p {
         background: var(--surface);
         display: block;
     }
-
+    .preview-slide video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: var(--surface);
+        display: block;
+    }
 .preview-placeholder {
     position: absolute;
     inset: 0;
